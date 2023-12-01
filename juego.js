@@ -1,7 +1,7 @@
 `use strict`
 
-function Jugador(apodo, vidas, valorDeCarta) {
-    this.apodo = apodo;
+function Jugador(nickname, vidas, valorDeCarta) {
+    this.nickname= nickname;
     this.vidas = vidas;
     this.valorDeCarta = valorDeCarta;
   
@@ -12,15 +12,20 @@ function Jugador(apodo, vidas, valorDeCarta) {
         this.vidas = 0; 
       }
     };
-    this.mostrarInfo = function () {
-      alert(`Apodo: ${this.apodo}, Vidas restantes: ${this.vidas}`);
+    this.vidasrestantes = function () {
+      alert(`Nombre: ${this.nickname}, Vidas restantes: ${this.vidas}`);
     };
   }
-  const jugador1 = new Jugador("Player1", 5, 3);
-  jugador1.mostrarInfo();
+  let jugador1 = new Jugador("Fabi", 5, 3);
+  jugador1.vidasrestantes();
   
   jugador1.reducirVidas(2);
   
-  jugador1.mostrarInfo();
+  jugador1.vidasrestantes();
+
+
+  let etiquetajudador1 = document.getElementById("player1");
+  etiquetajudador1.innerHTML= `Jugador uno: ${this.nickname="FABI"}`;
+
 
   
